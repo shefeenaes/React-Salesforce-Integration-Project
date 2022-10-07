@@ -1,0 +1,29 @@
+.App-logo {
+  height: 5vmin;
+  display: inline-block;
+  padding-left: 20px;
+  padding-top: 10px;
+  display: inline-block;
+  position: -webkit-sticky;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+
+}

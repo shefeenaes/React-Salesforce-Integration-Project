@@ -1,0 +1,142 @@
+.metabody {
+
+    width: 100%;
+    height: 14.3vw;
+
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    font-family: arial;
+    padding: 10;
+    margin: 0 auto;
+    margin-top: 5vh;
+    font-size: calc(5px + 2vmin);
+
+    text-align: center;
+}
+
+td,
+th {
+    border: 1px solid #ddd;
+    padding: 50px;
+}
+
+.display {
+    font-family: arial;
+    font-size: calc(5px + 2vmin);
+    margin-right: 500;
+    padding-top: 10px;
+    margin-left: 80%;
+}
+
+.button3 {
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 20px 80px 20px 80px;
+    text-align: center;
+    font-size: calc(4px + 2vmin);
+    margin-top: 50px;
+    margin-left: 40%;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.toggle2 {
+    --width: 400px;
+    --height: calc(var(--width) / 5);
+    position: relative;
+    display: inline-block;
+    padding: 5px;
+    margin-right: 500px;
+    width: var(--width);
+    height: var(--height);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    border-radius: var(--height);
+    cursor: pointer;
+}
+
+.toggle2 input {
+    display: none;
+}
+
+.toggle2 .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--height);
+    background-color: rgb(239, 239, 239);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle2 .slider::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(var(--height));
+    height: calc(var(--height));
+    border-radius: calc(var(--height) / 2);
+    background-color: #282c34;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle2 input:checked+.slider {
+    background-color: #f4511e;
+}
+
+.toggle2 input:checked+.slider::before {
+    transform: translateX(calc(var(--width) - var(--height)));
+}
+
+.toggle2 .labels {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100%;
+    height: 100%;
+
+    text-align: center;
+    font-size: calc(4px + 2vmin);
+    padding-top: 5px;
+    font-family: sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle2 .labels::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 5px;
+    color: #282c34;
+    opacity: 1;
+    padding-right: 80px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle2 .labels::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 10px;
+    color: rgb(239, 239, 239);
+    padding-left: 100px;
+    opacity: 0;
+    text-shadow: #282c34;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle2 input:checked~.labels::after {
+    opacity: 0;
+}
+
+.toggle2 input:checked~.labels::before {
+    opacity: 1;
+}
